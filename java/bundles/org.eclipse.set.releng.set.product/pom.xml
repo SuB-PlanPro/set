@@ -7,12 +7,12 @@
 		<relativePath>../../..</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.15.0-SNAPSHOT</version>
+		<version>60.15.6</version>
 	</parent>
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.releng.product</artifactId>
-	<version>60.15.0-SNAPSHOT</version>
+	<version>60.15.6</version>
 	<packaging>eclipse-repository</packaging>
 
 	<build>

@@ -5,13 +5,13 @@
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.i18n.integrationview.nl_de</artifactId>
-	<version>60.15.0-SNAPSHOT</version>
+	<version>60.15.6</version>
 	<packaging>eclipse-plugin</packaging>
 
 	<parent>
 		<relativePath>../../..</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.15.0-SNAPSHOT</version>
+		<version>60.15.6</version>
 	</parent>
 </project>
