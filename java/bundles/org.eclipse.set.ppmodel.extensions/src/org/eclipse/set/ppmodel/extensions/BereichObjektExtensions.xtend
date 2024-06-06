@@ -31,6 +31,7 @@ import static extension org.eclipse.set.ppmodel.extensions.PunktObjektTopKanteEx
 import static extension org.eclipse.set.ppmodel.extensions.TopKanteExtensions.*
 import static extension org.eclipse.set.ppmodel.extensions.utils.CollectionExtensions.*
 import static extension org.eclipse.set.ppmodel.extensions.utils.Debug.*
+import static extension org.eclipse.set.ppmodel.extensions.utils.IterableExtensions.*
 
 /**
  * Extensions for {@link Bereich_Objekt}.
