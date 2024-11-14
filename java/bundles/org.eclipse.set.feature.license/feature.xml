@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.set.feature.license"
       label="License"
-      version="60.18.0.qualifier"
+      version="60.18.0"
       provider-name="Eclipse Signalling Engineering Toolbox"
       os="win32">
 
