@@ -5,13 +5,13 @@
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.ppmodel.extensions.test</artifactId>
-	<version>60.19.5</version>
+	<version>60.19.7</version>
 	<packaging>eclipse-test-plugin</packaging>
 
 	<parent>
 		<relativePath>../../..</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.19.5</version>
+		<version>60.19.7</version>
 	</parent>
 </project>
