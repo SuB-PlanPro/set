@@ -5,14 +5,14 @@
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.pdf.utils</artifactId>
-	<version>60.19.7</version>
+	<version>60.19.8</version>
 	<packaging>eclipse-plugin</packaging>
 
 	<parent>
 		<relativePath>../../..</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.19.7</version>
+		<version>60.19.8</version>
 	</parent>
 
 	<build>
