@@ -11,7 +11,7 @@ Export-Package: org.eclipse.set.model.plazmodel,
  org.eclipse.set.model.plazmodel.impl,
  org.eclipse.set.model.plazmodel.util
 Bundle-ClassPath: .
-Bundle-Version: 60.19.5
+Bundle-Version: 60.19.7
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
  org.eclipse.set.model.validationreport;visibility:=reexport
