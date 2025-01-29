@@ -5,13 +5,13 @@
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.feature.table.test</artifactId>
-	<version>60.19.8</version>
+	<version>60.19.9</version>
 	<packaging>eclipse-test-plugin</packaging>
 
 	<parent>
 		<relativePath>../../..</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.19.8</version>
+		<version>60.19.9</version>
 	</parent>
 </project>
