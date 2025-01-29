@@ -6,14 +6,14 @@
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.feature.license</artifactId>
-	<version>60.19.10</version>
+	<version>60.19.11</version>
 	<packaging>eclipse-feature</packaging>
 
 	<parent>
 		<relativePath>../../..</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.19.10</version>
+		<version>60.19.11</version>
 	</parent>
 
 	<build>
