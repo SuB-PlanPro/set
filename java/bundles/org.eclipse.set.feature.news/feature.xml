@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.set.feature.news"
       label="Toolbox Release Notes"
-      version="60.20.0.qualifier"
+      version="60.20.0"
       provider-name="Eclipse Signalling Engineering Toolbox"
       os="win32">
 
