@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.set.test.feature"
       label="SET Test Feature"
-      version="60.21.5"
+      version="60.21.6"
       provider-name="Scheidt &amp; Bachmann System Technik GmbH">
 
    <description url="http://www.example.com/description">
