@@ -5,13 +5,13 @@
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.swtbot</artifactId>
-	<version>60.21.7</version>
+	<version>60.21.8</version>
 	<packaging>eclipse-test-plugin</packaging>
 	<parent>
 		<relativePath>../../../java-test</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.swtbot.parent</artifactId>
-		<version>60.21.7</version>
+		<version>60.21.8</version>
 	</parent>
 	<properties>
 		<skip-test>true</skip-test>
