@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: PlanPro Edit Support Toolbox nl_de
 Bundle-SymbolicName: org.eclipse.set.i18n.model.nl_de
-Bundle-Version: 60.22.0
+Bundle-Version: 60.22.1
 Fragment-Host: org.eclipse.set.model.planpro.edit
 Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-Vendor: Eclipse Signalling Engineering Toolbox
