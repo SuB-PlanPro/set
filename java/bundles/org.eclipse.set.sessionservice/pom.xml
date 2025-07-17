@@ -5,14 +5,14 @@
 
 	<groupId>org.eclipse.set</groupId>
 	<artifactId>org.eclipse.set.sessionservice</artifactId>
-	<version>60.23.4</version>
+	<version>60.23.5</version>
 	<packaging>eclipse-plugin</packaging>
 
 	<parent>
 		<relativePath>../../..</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.23.4</version>
+		<version>60.23.5</version>
 	</parent>
 
 	<build>

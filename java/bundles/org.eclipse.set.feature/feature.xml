@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.set.feature"
       label="Eclipse Signalling Engineering Toolbox Feature"
-      version="60.23.4"
+      version="60.23.5"
       provider-name="Eclipse Signalling Engineering Toolbox"
       os="win32">
 
