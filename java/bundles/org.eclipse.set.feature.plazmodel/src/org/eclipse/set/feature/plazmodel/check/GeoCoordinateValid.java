@@ -162,6 +162,7 @@ public class GeoCoordinateValid extends AbstractPlazContainerCheck
 		if (event.getTopic().equals(Events.CLOSE_SESSION)) {
 			alreadyFoundMetaData.clear();
 			topologicalCoordinates = Optional.empty();
+			return;
 		}
 	}
 
