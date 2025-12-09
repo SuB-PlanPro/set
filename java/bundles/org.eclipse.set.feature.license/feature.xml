@@ -2,7 +2,7 @@
 <feature
       id="org.eclipse.set.feature.license"
       label="License"
-      version="60.25.2"
+      version="60.25.3"
       provider-name="Eclipse Signalling Engineering Toolbox"
       os="win32">
 
