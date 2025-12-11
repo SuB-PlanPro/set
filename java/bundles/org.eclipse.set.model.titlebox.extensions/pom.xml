@@ -6,10 +6,10 @@
     <relativePath>../../..</relativePath>
     <groupId>org.eclipse.set</groupId>
     <artifactId>org.eclipse.set.releng.parent</artifactId>
-    <version>60.25.3</version>
+    <version>60.25.4</version>
   </parent>
   <groupId>org.eclipse.set</groupId>
   <artifactId>org.eclipse.set.model.titlebox.extensions</artifactId>
-  <version>60.25.3</version>
+  <version>60.25.4</version>
   <packaging>eclipse-plugin</packaging>
 </project>
