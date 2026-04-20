@@ -15,7 +15,7 @@
     <version>60.28.1</version>
   </parent>
   <modules>
-    <module>../java/bundles/org.eclipse.set.swtbot</module>
+    <module>../bundles/org.eclipse.set.swtbot</module>
   </modules>
   <properties>
     <set-version>${project.parent.version}</set-version>
@@ -24,7 +24,7 @@
     <profile>
       <id>swtbot</id>
       <modules>
-        <module>../java/bundles/org.eclipse.set.releng.target</module>
+        <module>../bundles/org.eclipse.set.releng.target</module>
       </modules>
       <activation>
         <property>
