@@ -5,11 +5,11 @@
   <parent>
     <groupId>org.eclipse.set</groupId>
     <artifactId>org.eclipse.set.releng.parent</artifactId>
-    <version>60.28.2</version>
+    <version>60.28.3</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
   <artifactId>org.eclipse.set.releng.target</artifactId>
-  <version>60.28.2</version>
+  <version>60.28.3</version>
   <packaging>eclipse-target-definition</packaging>
   <name>[target] org.eclipse.set.releng.target</name>
 </project>
