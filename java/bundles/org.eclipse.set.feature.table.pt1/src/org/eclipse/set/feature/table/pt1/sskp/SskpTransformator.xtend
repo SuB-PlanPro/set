@@ -73,8 +73,8 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 		TMFactory factory) {
 
 		for (PZB_Element pzb : container.PZBElement.filter [
-				PZBElementGUE?.IDPZBElementMitnutzung?.value === null
-			]) {
+			PZBElementGUE?.IDPZBElementMitnutzung?.value === null
+		]) {
 
 			if (Thread.currentThread.interrupted) {
 				return null
@@ -103,11 +103,11 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 
 	private def fillRowGroupContent(TableRow instance, PZB_Element pzb,
 		Fstr_DWeg dweg) {
-			
+
 		val pzbGUEs = (pzb.container.PZBElement.map[PZBElementGUE].filterNull.
 			filter[IDPZBElementMitnutzung?.value === pzb] +
 			#[pzb.PZBElementGUE]).filterNull
-			
+
 		// A: Sskp.Bezug.BezugsElement
 		fillIterable(
 			instance,
@@ -122,7 +122,9 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 			instance,
 			cols.getColumn(Wirkfrequenz),
 			pzb,
-			['''«PZBArt?.translate»«IF !pzbGUEs.nullOrEmpty» «GUE_ADDITION»«ENDIF»''']
+			[
+				'''«PZBArt?.translate»«IF !pzbGUEs.nullOrEmpty» «GUE_ADDITION»«ENDIF»'''
+			]
 		)
 
 		val isPZB2000 = pzb.PZBArt?.wert === ENUMPZBArt.ENUMPZB_ART_2000_HZ ||
@@ -277,7 +279,7 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 				],
 				[
 					PZBElementZuordnungFstr.map [ pzbZuordnung |
-						val wirksamKeit = pzbZuordnung.wirksamkeitFstr?.
+						val wirksamKeit = pzbZuordnung?.wirksamkeitFstr?.
 							translate
 						val fstrZugRangier = pzbZuordnung.IDFstrZugRangier?.
 							value?.fstrZugRangierBezeichnung
@@ -295,12 +297,11 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 					]
 				],
 				[
-					IDPZBElementZuordnung?.value?.PZBElementZuordnungFstr.
-						flatMap [
-							wirksamkeitFstr?.IDBearbeitungsvermerk
-						].map [
-							value?.bearbeitungsvermerkAllg?.kurztext?.wert
-						].filterNull
+					PZBElementZuordnungFstr.flatMap [
+						wirksamkeitFstr?.IDBearbeitungsvermerk
+					].map [
+						value?.bearbeitungsvermerkAllg?.kurztext?.wert
+					].filterNull
 				],
 				ITERABLE_FILLING_SEPARATOR,
 				MIXED_STRING_COMPARATOR
@@ -385,18 +386,22 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 				INAGefahrstelle
 			].flatten
 
-			val isGefahrstelle = inaGefahrstelles.exists [
+			val gefahrstelle = inaGefahrstelles.filter [
 				prioritaetGefahrstelle?.wert.intValue === 1
-			] && !inaGefahrstelles.map[IDMarkanterPunkt].empty
+			].toSet
 			val scaleValue = pzb.distanceScale
 			// K: Sskp.Ina.Gef_Stelle
 			fillIterableWithConditional(
 				instance,
 				cols.getColumn(Gef_Stelle),
 				pzb,
-				[isGefahrstelle],
 				[
-					inaGefahrstelles.map [
+					!gefahrstelle.nullOrEmpty && !inaGefahrstelles.map [
+						IDMarkanterPunkt
+					].empty
+				],
+				[
+					gefahrstelle.map [
 						IDMarkanterPunkt?.value?.bezeichnung?.
 							bezeichnungMarkanterPunkt?.wert
 					]
@@ -406,19 +411,26 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 			)
 
 			// L: Sskp.Ina.Gef_Stelle_abstand
-			fillConditional(
+			fillIterableWithConditional(
 				instance,
 				cols.getColumn(Gef_Stelle_Abstand),
 				pzb,
-				[isGefahrstelle],
 				[
-					val markanteStelle = inaGefahrstelles.map [
+					!gefahrstelle.nullOrEmpty && !inaGefahrstelles.map [
+						IDMarkanterPunkt
+					].empty
+				],
+				[
+					val markanteStelle = gefahrstelle.map [
 						IDMarkanterPunkt?.value?.IDMarkanteStelle?.value
 					].filter(Punkt_Objekt)
-					return AgateRounding.roundDown(
-						getDistanceOfPoints(markanteStelle, it), scaleValue).
-						toTableDecimal(scaleValue)
-				]
+					return markanteStelle.map [ ms |
+						AgateRounding.roundDown(getPointsDistance(ms, it).min,
+							scaleValue).toTableDecimal(scaleValue)
+					]
+				],
+				MIXED_STRING_COMPARATOR,
+				ITERABLE_FILLING_SEPARATOR
 			)
 
 			val bahnSteigKantes = pzb?.PZBElementZuordnungBP?.map [
@@ -528,7 +540,10 @@ class SskpTransformator extends AbstractPlanPro2TableModelTransformator {
 				pzb,
 				[pzbGUEs],
 				null,
-				[pruefgeschwindigkeit?.wert.intValue.toString]
+				[
+					val wert = pruefgeschwindigkeit?.wert
+					return wert !== null ? wert.intValue.toString : ""
+				]
 			)
 
 			// S: Sskp.Gue.Pruefzeit
