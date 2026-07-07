@@ -546,7 +546,6 @@ public class TableServiceUtils {
 			});
 			return;
 		}
-
 		final List<Pair<TableRow, Pt1TableChangeProperties>> changedDataRow = changedDatas
 				.stream()
 				.map(data -> {
@@ -579,6 +578,9 @@ public class TableServiceUtils {
 	private static CellContent getNewContent(final CellContent oldContent,
 			final Pt1TableChangeProperties properties,
 			final SessionService sessionService) {
+		if (oldContent == null) {
+			throw new IllegalArgumentException();
+		}
 		return switch (oldContent) {
 			case final StringCellContent stringContent -> getNewContent(
 					stringContent, properties);
@@ -694,8 +696,9 @@ public class TableServiceUtils {
 				.filter(value -> value != null && !value.trim().isEmpty())
 				.collect(Collectors.toSet());
 		return mainPlanCellValues.equals(comparePlanCellValues)
-				? clone.getMainPlanCellContent()
-				: clone;
+				&& clone.getMainPlanCellContent() != null
+						? clone.getMainPlanCellContent()
+						: clone;
 	}
 
 	private static CompareStateCellContent createCompareCellContent(
