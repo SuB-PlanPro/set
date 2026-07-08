@@ -10,7 +10,7 @@
 		<relativePath>../../</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.29.1</version>
+		<version>60.29.2</version>
 	</parent>
 	<build>
 		<!-- Use mockito as java agent 

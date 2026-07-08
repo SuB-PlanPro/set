@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.eclipse.set.model.temporaryintegration.edit;singleton:=true
 Automatic-Module-Name: org.eclipse.set.model.temporaryintegration.edit
-Bundle-Version: 60.29.1
+Bundle-Version: 60.29.2
 Bundle-ClassPath: .
 Bundle-Activator: org.eclipse.set.model.temporaryintegration.provider.TemporaryIntegrationEditPlugin$Implementation
 Bundle-Vendor: %providerName

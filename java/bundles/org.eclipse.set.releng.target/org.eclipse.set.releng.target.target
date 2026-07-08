@@ -200,19 +200,19 @@
         <dependency>
           <groupId>org.eclipse.set</groupId>
           <artifactId>org.eclipse.set.browser.cef.win32</artifactId>
-          <version>60.29.1</version>
+          <version>60.29.2</version>
           <type>jar</type>
         </dependency>
         <dependency>
           <groupId>org.eclipse.set</groupId>
           <artifactId>org.eclipse.set.browser.lib</artifactId>
-          <version>60.29.1</version>
+          <version>60.29.2</version>
           <type>jar</type>
         </dependency>
         <dependency>
           <groupId>org.eclipse.set</groupId>
           <artifactId>org.eclipse.set.browser</artifactId>
-          <version>60.29.1</version>
+          <version>60.29.2</version>
           <type>jar</type>
         </dependency>
       </dependencies>
@@ -382,19 +382,19 @@ DynamicImport-Package: *
         <dependency>
           <groupId>org.eclipse.set</groupId>
           <artifactId>org.eclipse.set.model.planpro.edit</artifactId>
-          <version>60.29.1</version>
+          <version>60.29.2</version>
           <type>jar</type>
         </dependency>
         <dependency>
           <groupId>org.eclipse.set</groupId>
           <artifactId>org.eclipse.set.model.planpro.editor</artifactId>
-          <version>60.29.1</version>
+          <version>60.29.2</version>
           <type>jar</type>
         </dependency>
         <dependency>
           <groupId>org.eclipse.set</groupId>
           <artifactId>org.eclipse.set.model.planpro</artifactId>
-          <version>60.29.1</version>
+          <version>60.29.2</version>
           <type>jar</type>
         </dependency>
       </dependencies>
