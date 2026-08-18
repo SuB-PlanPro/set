@@ -10,7 +10,7 @@
 		<relativePath>../../</relativePath>
 		<groupId>org.eclipse.set</groupId>
 		<artifactId>org.eclipse.set.releng.parent</artifactId>
-		<version>60.30.0</version>
+		<version>60.30.1</version>
 	</parent>
 	<build>
 		<plugins>
