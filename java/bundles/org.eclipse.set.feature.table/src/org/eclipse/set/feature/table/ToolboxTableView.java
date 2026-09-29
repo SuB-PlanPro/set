@@ -902,7 +902,8 @@ public class ToolboxTableView extends BasePart {
 				.getRowGroupComparator(tableInfo, tableType);
 		if (table != null
 				&& comparator instanceof final TableRowGroupComparator rowGroupComparator) {
-			// This is new instance of Comparator, therefore need call sort here
+			// This is new instance of Comparator, therefore need call sort
+			// here
 			// to determine the waiting on another service criterion
 			ECollections.sort(table.getTablecontent().getRowgroups(),
 					rowGroupComparator);
@@ -937,6 +938,10 @@ public class ToolboxTableView extends BasePart {
 							natTable.refresh();
 						}
 					}));
+			if (!rowGroupComparator.getCriterionsException().isEmpty()) {
+				getDialogService().openInformation(getToolboxShell(),
+						getViewTitle(), messages.TableTransform_Sort_Error);
+			}
 		}
 	}
 
