@@ -128,6 +128,7 @@ export default class MapContainer extends Vue {
         console.log(pixelProMeter)
         store.commit('setCustomPpm', Math.round(pixelProMeter))
       })
+      console.log(pixelProMeter)
     })
 
     // Disable locked scale after manually zooming
