@@ -317,6 +317,9 @@ public class ExcelExportBuilder implements TableExport {
 	private static void fillFootnoteCell(final Cell cell,
 			final String cellContent, final List<FootnoteInfo> allFootnotes,
 			final FootnoteContainer fnContainer, final boolean inlineFootnote) {
+		if (fnContainer == null) {
+			return;
+		}
 		final List<Footnote> footnotes = getFootnotes(fnContainer);
 		final List<FootnoteInfo> fnInfo = TableToTableDocument
 				.processFootnotes(footnotes.stream()
